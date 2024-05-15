@@ -19,6 +19,8 @@ const AddReview = () => {
                 reviews: reviewText,
                 rating
             });
+            navigate("/");
+            navigate(location.pathname);
             window.location.reload();
             
         } catch (error) {
@@ -50,7 +52,7 @@ const AddReview = () => {
             </div>
             <div className="form-group">
                 <label htmlFor="review">Review:</label>
-                <textarea value={reviewText} onChange={e => setReviewText(e.target.value)} id="review" className="form-control"></textarea>
+                <textarea value={reviewText} onChange={e => setReviewText(e.target.value)} id="reviews" className="form-control"></textarea>
             </div>
             <button type="submit" onClick={handleSubmitReview} className="btn btn-primary">Submit</button>
         </form>
